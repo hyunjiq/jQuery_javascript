@@ -11,9 +11,15 @@
     <script>
         $(function(){
             const bglist = ["pink","red","gray","green"];
-            let conut = 100 % bglist.length; //0 ,1 ,2 ,3
+            let conut = 0; //0 ,1 ,2 ,3
             //bglist.length 는 숫자 4를 의미 , 4로 나누었을때의 나머지를 구하는것
-            $("body").css("background",bglist[conut]);
+            setInterval(function(){
+                conut++;
+                count = count % bglist.length;
+                $("body").css("background", bglist[count]);
+            }, 3000); // 3초뒤부터 3초마다 실행하겠다
+    
+            $("body").css("background",bglist[conut]); //화면이 열리자마자 1회 실행
         });
     </script>
 </head>
