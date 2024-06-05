@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주기적으로 실행 setInterval(c언어 내적개체)</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+    <script>
+        $(function(){
+            const bglist = ["pink","red","gray","green"];
+            let conut = 100 % bglist.length; //0 ,1 ,2 ,3
+            //bglist.length 는 숫자 4를 의미 , 4로 나누었을때의 나머지를 구하는것
+            $("body").css("background",bglist[conut]);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
